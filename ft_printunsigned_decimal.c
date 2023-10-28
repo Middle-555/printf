@@ -6,13 +6,13 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 11:08:08 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/10/25 15:11:55 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/10/27 12:08:00 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_printunsigned_decimal(unsigned int nb)
+int	ft_printunsigned_decimal(unsigned int nb)
 {
 	if (nb >= 0 && nb <= 9)
 	{

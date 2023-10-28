@@ -6,13 +6,13 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:27:32 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/10/25 11:30:26 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/10/27 12:08:04 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
