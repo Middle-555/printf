@@ -6,11 +6,11 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:25:10 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/10/28 12:48:25 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/10/30 17:11:02 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_format(char format_type, va_list args)
 {
@@ -18,11 +18,19 @@ int	ft_format(char format_type, va_list args)
 
 	count = 0;
 	if (format_type == 'c')
-		ft_putchar(va_arg(args, char));
+		count += ft_putchar(va_arg(args, int));
 	else if (format_type == 's')
-		ft_putstr(va_arg(args, char));
+		count += ft_putstr(va_arg(args, int));
 	else if (format_type == 'p')
-		ft_printadresse(va_arg(args, unsigned long int));
+		count += ft_printadresse(va_arg(args, unsigned long int));
+	else if (format_type == 'x')
+		count += ft_printhexa_low(va_arg(args, int));
+	else if (format_type == 'X')
+		count += ft_printhexa_upper(va_arg(args, int));
+	else if (format_type == 'd')
+		count += ft_putnbr2(va_arg(args, int));
+	else if (format_type == 'i')
+		count += ft_putnbr2(va_arg(args, int));
 }
 
 int	ft_printf(const char *type, ...)
