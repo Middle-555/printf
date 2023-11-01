@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:17:10 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/10/30 16:51:39 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/01 11:44:53 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,15 @@
 int	ft_printhexa_low(int nb)
 {
 	char	*tab;
+	int		count;
 
 	tab = "0123456789abcdef";
 	if (nb <= 16)
-		ft_putchar(tab[nb % 16]);
-	else if (nb < 0)
-	{
-		ft_putchar ('-');
-		ft_printhexa_low (nb * (-1));
-	}
+		count += ft_putchar(tab[nb % 16]);
 	else
 	{
 		ft_printhexa_low (nb / 16);
 		ft_printhexa_low (nb % 16);
 	}
+	return (count);
 }
