@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:25:10 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/01 10:55:51 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:49:36 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_format(char format_type, va_list args)
 	else if (format_type == 'X')
 		count += ft_printhexa_upper(va_arg(args, int));
 	else if (format_type == 'd')
-		count += ft_printunsigned_decimal(va_arg(args, int));
+		count += ft_putnbr2(va_arg(args, int));
 	else if (format_type == 'i')
 		count += ft_putnbr2(va_arg(args, int));
 	return (count);
@@ -44,7 +44,7 @@ int	ft_printf(const char *type, ...)
 	while (*type != '\0')
 	{
 		if (*type == '%')
-			count += ft_printmodulo(*(++type));
+			count += ft_format(*(++type), args);
 		else
 			count += write(1, type, 1);
 		++type;

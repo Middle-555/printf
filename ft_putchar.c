@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:27:32 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/10/30 16:51:54 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/01 12:47:26 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 int	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	int		count;
+
+	count = 0;
+	count += write(1, &c, 1);
+	return (count);
 }
