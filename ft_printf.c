@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:25:10 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/02 11:49:36 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:53:11 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ int	ft_format(char format_type, va_list args)
 		count += ft_putnbr2(va_arg(args, int));
 	else if (format_type == 'i')
 		count += ft_putnbr2(va_arg(args, int));
+	else if (format_type == '%')
+		count += ft_printmodulo(va_arg(args, int));
+	else if (format_type == 'u')
+		count += ft_printunsigned_decimal(va_arg(args, unsigned int));
 	return (count);
 }
 
