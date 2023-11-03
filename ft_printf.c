@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:25:10 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/03 15:42:39 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/03 17:12:33 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	ft_format(char format_type, va_list args)
 	else if (format_type == 'p')
 		count += ft_printadresse(va_arg(args, void *));
 	else if (format_type == 'x')
-		count += ft_printhexa_low(va_arg(args, long long));
+		count += ft_printhexa_low(va_arg(args, unsigned long));
 	else if (format_type == 'X')
-		count += ft_printhexa_upper(va_arg(args, long long));
+		count += ft_printhexa_upper(va_arg(args, unsigned long));
 	else if (format_type == 'd')
 		count += ft_putnbr2(va_arg(args, int));
 	else if (format_type == 'i')
