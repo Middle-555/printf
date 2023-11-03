@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:30:42 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/02 11:36:50 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/03 10:50:38 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_putstr(char *src)
 
 	count = 0;
 	i = 0;
-	if (!src)
-		return (0);
+	if (src == NULL)
+		return (write(1, "(null)", 6));
 	while (src[i])
 	{
 		count += write(1, &src[i], 1);

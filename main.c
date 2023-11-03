@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:30:50 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/02 11:58:31 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/03 15:29:53 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ int main(void)
     ret2 = printf("Adresse : %p\n", &ret1);
     printf("Retour ft_printf: %d, Retour printf: %d\n\n", ret1, ret2);
 
-    ret1 = ft_printf("Hexa (minuscule) : %x\n", 255);
-    ret2 = printf("Hexa (minuscule) : %x\n", 255);
+    ret1 = ft_printf("Hexa (minuscule) : %x\n", __LONG_MAX__);
+    ret2 = printf("Hexa (minuscule) : %x\n", __LONG_MAX__);
     printf("Retour ft_printf: %d, Retour printf: %d\n\n", ret1, ret2);
 
-    ret1 = ft_printf("Hexa (majuscule) : %X\n", 255);
-    ret2 = printf("Hexa (majuscule) : %X\n", 255);
+    ret1 = ft_printf("Hexa (majuscule) : %X\n", -42);
+    ret2 = printf("Hexa (majuscule) : %X\n", -42);
     printf("Retour ft_printf: %d, Retour printf: %d\n\n", ret1, ret2);
 
     ret1 = ft_printf("Entier signé : %d\n", -42);
@@ -48,4 +48,4 @@ int main(void)
 
     return (0);
 }
-*/
+

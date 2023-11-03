@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 11:35:38 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/02 15:52:27 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/03 16:05:00 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int		ft_putchar(char c);
 int		ft_putstr(char *src);
 int		ft_putnbr2(int nb);
 int		ft_printunsigned_decimal(unsigned int nb);
-int		ft_printhexa_low(unsigned long nb);
-int		ft_printhexa_upper(unsigned long nb);
+int		ft_printhexa_low(long nb);
+int		ft_printhexa_upper(long nb);
 int		ft_printadresse(void *adresse);
 int		ft_printmodulo(char c);
 
