@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:41:54 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/03 12:23:37 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/05 12:41:08 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ int	ft_printadresse(void *adresse)
 
 	count = 0;
 	count += ft_putstr("0x");
-	count += ft_printhexa_low((unsigned long)adresse);
+	count += ft_printhexa_low((unsigned long long)adresse);
 	return (count);
 }

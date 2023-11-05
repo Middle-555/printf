@@ -6,12 +6,13 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:30:50 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/03 15:29:53 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/05 12:31:53 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 int main(void)
 {
@@ -30,8 +31,8 @@ int main(void)
     ret2 = printf("Adresse : %p\n", &ret1);
     printf("Retour ft_printf: %d, Retour printf: %d\n\n", ret1, ret2);
 
-    ret1 = ft_printf("Hexa (minuscule) : %x\n", __LONG_MAX__);
-    ret2 = printf("Hexa (minuscule) : %x\n", __LONG_MAX__);
+    ret1 = ft_printf("Hexa (minuscule) : %x\n", LONG_MAX);
+    ret2 = printf("Hexa (minuscule) : %x\n", LONG_MAX);
     printf("Retour ft_printf: %d, Retour printf: %d\n\n", ret1, ret2);
 
     ret1 = ft_printf("Hexa (majuscule) : %X\n", -42);
@@ -45,7 +46,7 @@ int main(void)
     ret1 = ft_printf("Entier signé : %i\n", 42);
     ret2 = printf("Entier signé : %i\n", 42);
     printf("Retour ft_printf: %d, Retour printf: %d\n\n", ret1, ret2);
-
+    
     return (0);
 }
 
