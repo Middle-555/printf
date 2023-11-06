@@ -6,12 +6,12 @@
 #    By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 13:24:41 by kpourcel          #+#    #+#              #
-#    Updated: 2023/11/02 15:52:38 by kpourcel         ###   ########.fr        #
+#    Updated: 2023/11/06 14:28:21 by kpourcel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FT_PRINTF =	ft_printf.c ft_printadresse.c ft_printhexa_low.c ft_printhexa_upper.c ft_putstr.c \
-			ft_putchar.c ft_printmodulo.c ft_putnbr2.c ft_printunsigned_decimal.c
+			ft_putchar.c ft_putnbr2.c ft_printunsigned_decimal.c
 SRCS = ${FT_PRINTF}
 
 OBJS = ${SRCS:.c=.o}
