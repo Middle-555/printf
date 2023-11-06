@@ -6,13 +6,13 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:23:33 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/05 12:37:55 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:00:17 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printhexa_upper(unsigned int nb)
+int	ft_printhexa_upper(unsigned long nb)
 {
 	char	*tab;
 	int		count;

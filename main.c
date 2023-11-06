@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:30:50 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/05 12:31:53 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:46:10 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int main(void)
     ret2 = printf("Adresse : %p\n", &ret1);
     printf("Retour ft_printf: %d, Retour printf: %d\n\n", ret1, ret2);
 
-    ret1 = ft_printf("Hexa (minuscule) : %x\n", LONG_MAX);
-    ret2 = printf("Hexa (minuscule) : %x\n", LONG_MAX);
+    ret1 = ft_printf("Hexa (minuscule) : %x\n", 43242);
+    ret2 = printf("Hexa (minuscule) : %x\n", 43242);
     printf("Retour ft_printf: %d, Retour printf: %d\n\n", ret1, ret2);
 
     ret1 = ft_printf("Hexa (majuscule) : %X\n", -42);
@@ -46,6 +46,10 @@ int main(void)
     ret1 = ft_printf("Entier signé : %i\n", 42);
     ret2 = printf("Entier signé : %i\n", 42);
     printf("Retour ft_printf: %d, Retour printf: %d\n\n", ret1, ret2);
+
+    ret1 = ft_printf(" Le pourcentage est de %d. %%\n", 42);
+    ret2= printf(" Le pourcentage est de %d. %%\n", 42);
+    printf("Retour ft_printf: %d%%, Retour printf: %d%%\n\n", ret1, ret2);
     
     return (0);
 }

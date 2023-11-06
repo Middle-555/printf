@@ -6,7 +6,7 @@
 /*   By: kpourcel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:25:10 by kpourcel          #+#    #+#             */
-/*   Updated: 2023/11/05 12:35:50 by kpourcel         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:50:40 by kpourcel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@ int	ft_format(char format_type, va_list args)
 	else if (format_type == 'p')
 		count += ft_printadresse(va_arg(args, void *));
 	else if (format_type == 'x')
-		count += ft_printhexa_low(va_arg(args, unsigned int));
+		count += ft_printhexa_low((long)va_arg(args, unsigned int));
 	else if (format_type == 'X')
-		count += ft_printhexa_upper(va_arg(args, unsigned int));
+		count += ft_printhexa_upper((long)va_arg(args, unsigned int));
 	else if (format_type == 'd')
 		count += ft_putnbr2(va_arg(args, int));
 	else if (format_type == 'i')
 		count += ft_putnbr2(va_arg(args, int));
 	else if (format_type == '%')
-		count += ft_printmodulo(va_arg(args, int));
+		count += ft_putchar('%');
 	else if (format_type == 'u')
 		count += ft_printunsigned_decimal(va_arg(args, unsigned int));
 	return (count);
@@ -48,9 +48,9 @@ int	ft_printf(const char *type, ...)
 	while (*type != '\0')
 	{
 		if (*type == '%')
-			count += ft_format(*(++type), args);
+			count += ft_format(*++type, args);
 		else
-			count += write(1, type, 1);
+			count += ft_putchar(*type);
 		++type;
 	}
 	va_end(args);
